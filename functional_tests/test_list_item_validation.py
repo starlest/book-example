@@ -64,7 +64,7 @@ class ItemValidationTest(FunctionalTest):
         self.get_item_input_box().send_keys(Keys.ENTER)
 
         self.wait_for(lambda: self.assertTrue(
-            self.get_error_element()
+            self.get_error_element().is_displayed()
         ))
 
         # She starts typing in the input box to clear the error
@@ -72,5 +72,5 @@ class ItemValidationTest(FunctionalTest):
 
         # She is pleased to see that the error message disappears
         self.wait_for(lambda: self.assertFalse(
-            self.get_error_element()
+            self.get_error_element().is_displayed()
         ))
