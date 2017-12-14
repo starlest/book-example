@@ -132,12 +132,10 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'level': 'INFO',
             'handlers': ['console'],
-            'propagate': True,
         },
-    }
-
+    },
+    'root': {'level': 'INFO'},
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
