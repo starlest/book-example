@@ -132,7 +132,7 @@ LOGGING = {
         'logfile': {
             'level':'DEBUG',
             'class':'logging.FileHandler',
-            'filename': BASE_DIR + "/../../error.log",
+            'filename': "../../error.log",
         },
     },
     'root': {
