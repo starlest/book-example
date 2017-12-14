@@ -132,7 +132,7 @@ LOGGING = {
         'logfile': {
             'level':'DEBUG',
             'class':'logging.FileHandler',
-            'filename': "../../error.log",
+            'filename': BASE_DIR + "/../logfile",
         },
     },
     'root': {
@@ -140,6 +140,7 @@ LOGGING = {
         'handlers': ['console', 'logfile']
     },
 }
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'starlest@gmail.com'
