@@ -130,11 +130,14 @@ LOGGING = {
             'class': 'logging.StreamHandler',
         },
     },
-    'django': {
-        'level': 'INFO',
-        'handlers': ['console'],
-        'propagate': True,
-    },
+    'loggers': {
+        'django': {
+            'level': 'INFO',
+            'handlers': ['console'],
+            'propagate': True,
+        },
+    }
+
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
