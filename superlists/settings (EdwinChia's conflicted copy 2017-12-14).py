@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5mvewp!q(^*&*0+0g)f$_3i8_f#vrgk&juuv087+i4sb&amh9m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 # Application definition
 
@@ -132,16 +132,14 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'level': 'INFO',
             'handlers': ['console'],
-            'propagate': True,
         },
     },
     'root': {'level': 'INFO'},
 }
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'support@bigetron.gg'
+EMAIL_HOST_USER = 'starlest@gmail.com'
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
