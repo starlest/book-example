@@ -39,7 +39,7 @@ class FunctionalTest(StaticLiveServerTestCase):
 
     @wait
     def wait_for(self, fn):
-        return fn
+        return fn()
 
     @wait
     def wait_for_row_in_list_table(self, row_text):
