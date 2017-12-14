@@ -129,17 +129,17 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
         },
-    },
-    'loggers': {
-        'django': {
-            'level': 'INFO',
-            'handlers': ['console'],
-            'propagate': True,
+        'logfile': {
+            'level':'DEBUG',
+            'class':'logging.FileHandler',
+            'filename': BASE_DIR + "../../error.log",
         },
     },
-    'root': {'level': 'INFO'},
+    'root': {
+        'level': 'INFO',
+        'handlers': ['console', 'logfile']
+    },
 }
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'support@bigetron.gg'
