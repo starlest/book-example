@@ -129,13 +129,16 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
         },
+        'logfile': {
+            'level':'DEBUG',
+            'class':'logging.FileHandler',
+            'filename': BASE_DIR + "/../logfile",
+        },
     },
-    'loggers': {
-        'django': {
-            'handlers': ['console']
-        }
+    'root': {
+        'level': 'INFO',
+        'handlers': ['console', 'logfile']
     },
-    'root': {'level': 'INFO'},
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
